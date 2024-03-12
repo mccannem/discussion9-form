@@ -1,0 +1,69 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+
+  :root {
+    --green: #cfebb6;
+    --black: #000000;
+    --purple: #8babf1;
+    --darkpurple: #7791CB;
+  }
+
+  body {
+    font-family: inter;
+  }
+  
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 3px solid var(--darkpurple);
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--black);
+    background: var(--green);
+  }
+
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background: #575294; */
+    color: var(--black);
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--purple);
+    color: var(--black);
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid var(--black);
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--purple);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--darkpurple);
+  }
